@@ -18,7 +18,7 @@ while 1
     data = reshape(data, Ly, Lx, []);
     
     % ignore bad frames
-    badi = ops.badframes(ix + [1:size(data,3)]);
+%     badi = ops.badframes(ix + [1:size(data,3)]);
 %     data(:,:, badi) = [];
     
     % subtract off the mean of this batch

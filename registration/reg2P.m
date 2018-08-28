@@ -42,6 +42,11 @@ catch
     error('could not find any tif or tiff, check your path');
 end
 [Ly, Lx, ~, ~] = size(IMG);
+if max(IMG(:)) > 2^15
+    ops.scaleTiff = 2;
+else
+    ops.scaleTiff = 1;
+end
 ops.Ly = Ly;
 ops.Lx = Lx;
 
